@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Premios TUPU</title>
+    <link rel="stylesheet" href="css/pagina-boceto.css">
+    <link rel="icon" href="images/_153acf32-5dd5-478f-8387-fadfc6b64ee1.jpeg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- Botón del menú para dispositivos móviles -->
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <!-- Barra de navegación -->
+        <!-- Barra de navegación -->
+        <nav class="navigation">
+          <div class="nav-left" >
+            <a href="./htmls/info.html" class="" >Info</a>
+            <a href="./htmls/categorías.html" class="" >Categorías</a>
+            <a href="#contacto" class="" >Contacto</a>
+          </div>
+          <span class="header-link"  style="cursor: pointer;">
+            <a href="./htmls/galery.html" class="" >PARTICIPANTES</a>
+          </span>
+        </nav>
+
+    </header>
+
+    <div class="titulo">
+      <h1>PREMIOS TUPU</h1>
+    
+      <div class="contenedor-padre">
+        <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared?autoplay=1" class="trailer">Haz clic aquí para ver el trailer oficial</a>
+      </div>
+    </div>
+    
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Si quieres participar, mándanos un correo con tu nombre y 
+        una breve descripción acerca del tema en qué quieres participar y como, 
+        a este correo:
+      </p>
+      <h3>
+
+      </h3>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+  (function(){
+      emailjs.init("WFT2N3MtFPL5EtdpU"); // Replace with your EmailJS user ID
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // generate the contact number value
+      this.contact_number.value = Math.random() * 100000 | 0;
+
+      emailjs.sendForm('service_8847ntc', 'template_wnwvsvp', this) // Replace with your service ID and template ID
+          .then(function() {
+              console.log('SUCCESS!');
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+  </script>
+
+    <footer>
+        <p>© 2024 Premios TUPU</p>
+    </footer>
+    <script src="js/menu.js"></script>
+</body>
+</html>
