@@ -32,7 +32,7 @@ body {
     height: auto;
     width: auto;
     /*Imagen de fondo*/
-    background-image: url("images/_22f39219-dbdd-4227-a34a-dfd1ab2e290c.jpeg");
+    background-image: url("../images/_22f39219-dbdd-4227-a34a-dfd1ab2e290c.jpeg");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center 20%; /* Ajusta la posición vertical de la imagen */
