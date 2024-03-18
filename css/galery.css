@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #C826F0, #3DCFB7);
+}
+
+section {
+    display: flex;
+    width: 900px;
+    height: 530px;
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+
+}
+
+/*RESPONSIVE FORM*/
+
+/* Estilos para tamaños de pantalla más pequeños (hasta 750px) */
+@media screen and (max-width: 750px) {
+    html {
+        font-size: 12px;
+    }
+
+    section {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        transition: none;
+    }
+
+    section img:hover {
+        cursor: default;
+        width: 100%;
+        opacity: 1;
+        filter: none;
+    }
+}
+
+/* Estilos para tamaños de pantalla aún más pequeños (hasta 420px) */
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 10px;
+    }
+}
+
